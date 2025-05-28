@@ -1,0 +1,209 @@
+<html lang="en">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	<title>Portafolio Giovanni</title>
+</head>
+<script>
+	window.onload = function() {
+		scrollToBox(0);
+	};
+	function scrollToBox(index) {
+		const contenedor = document.getElementById('scrolldiv');
+		const mainBox = document.getElementById('boxmain2');
+		const cajas = document.querySelectorAll('.sub');
+
+		if (cajas[index]) {
+			const caja = cajas[index];
+
+			const cajaRect = caja.getBoundingClientRect();
+			const mainBoxRect = mainBox.getBoundingClientRect();
+
+
+			const centroMainBox = mainBoxRect.left + (mainBoxRect.width / 2);
+			const centroCaja = cajaRect.left + (cajaRect.width / 2);
+
+			const diferencia = centroCaja - centroMainBox;
+
+			contenedor.scrollTo({
+				left: contenedor.scrollLeft + diferencia,
+				behavior: 'smooth'
+			});
+		}
+	}
+</script>
+<body>
+	<div id="boxmain">
+		<img src="./img/OIP.png">
+		<h1>Giovanni Sánchez Román</h1>
+		<div id="SobreMi">
+			<h4>Sobre mi</h4>
+			<p>Soy un estudiante de 16 años, desarrollador de aplicaciones moviles y bases de datos. Tengo conocimientos en Python, Desarrollo Web, Bases de Datos y  Android Studio. Tambien tengo experiencia en diseño de aplicaciones web y aplicaciones moviles.</p>
+		</div>     
+		<br> 
+		<div id="SobreMi">
+			<h4>Contacto</h4>
+			<p><i class="fa-brands fa-linkedin"></i> "En Proceso"</p>
+			<p><i class="fa-brands fa-square-github"></i>  <a href="https://github.com/G10sr">G10sr</a></p>
+			<p><i class="fa-solid fa-phone"></i> +506 8550-0236</p>
+			<p><i class="fa-solid fa-envelope"></i> <a>giovanni.sanchez.roman@ctpcit.ed.cr</a></p>
+		</div>   
+	</div>
+	<div id="boxmain2">
+		<div id="minimenu">
+			<button id="a1" onclick="scrollToBox(0)">Formación</button>
+			<button id="a2" onclick="scrollToBox(1)">Habilidades</button>
+			<button id="a3" onclick="scrollToBox(2)">Proyectos</button>
+		</div>
+		<div id="scrolldiv">
+			<div style="width: 0.5vw; flex-shrink: 0;"></div>
+			<div class="sub" id="s1">
+                <p>Educación</p>
+                <div class="edDECont">
+					<div class="edDe">
+						<p>Escuela Secundaria CTP CIT<br><small>Educación Secundaria y Tecnico en Desarrollo de Aplicaciones Moviles<br>2021 - Actualidad </small></p>
+						<img src="../img/colegio/cit.png">
+                    </div>
+                    <div class="edDe">
+						<p>Escuela Primaria Montebello<br><small>Educación Primaria<br>2015 - 2020 </small> </p>
+						<img src="../img/colegio/montebello.png">
+                    </div>
+                </div>
+				<p>Certificaciones</p>
+                <div class="edDECont">
+                    <div class="edDe">
+						<p>Cisco Linux Essential<br><small>Cisco Networking Academy<br>2024</small></p>
+						<img src="../img/certific/cisco.jpg">
+                    </div>
+					<div class="edDe">
+						<p>Cisco IT Essential<br><small>Cisco Networking Academy<br>2024</small></p>
+						<img src="../img/certific/cisco.jpg">
+                    </div>
+					<div class="edDe">
+						<p>Junior Archievements Finanzas<br><small>Junior Archievements Costa Rica<br>2024</small></p>
+						<img src="../img/certific/JA.jpg">
+                    </div>
+                </div>
+				<p>Idiomas</p>
+                <div class="edDECont">
+                    <div class="edDe">
+						<p>Español<br><small>Nativo</small></p>
+						<img src="../img/idioms/esp.jpg">
+
+                    </div>
+					<div class="edDe">
+						<p>Ingles<br><small>Nivel B2</small></p>
+						<img src="../img/idioms/us.jpg">
+
+                    </div>
+					<div class="edDe">
+						<p>Portugués<br><small>Bajo</small></p>
+						<img src="../img/idioms/brasil.png">
+
+                    </div>
+					<div class="edDe">
+						<p>Sueco<br><small>Principiante</small></p>
+						<img src="../img/idioms/swed.png">
+                    </div>
+                </div>
+                <p>Actividades</p>
+                <div class="edDECont">
+					<div class="edDe">
+						<p>Olimpiadas de Matematica<br><small>Participación (Actualmente)</small></p>
+						<img src="../img/activities/olco.jpg">
+                    </div>
+					<div class="edDe">
+						<p>Voluntariado en AHPPA<br><small>Participación (Actualmente)</small></p>
+						<img src="../img/activities/ahppa.jpg">
+
+                    </div>
+					<div class="edDe">
+						<p>Campeonato First Lego League<br><small>Participación 2025 (2do lugar)</small></p>
+						<img src="../img/activities/fll.jpg">
+                    </div>
+                    <div class="edDe">
+						<p>World Robotics Olympiads Nacionales<br><small>Participación 2022-2024</small></p>
+						<img src="../img/activities/wro.jpg">
+
+                    </div>
+					<br>
+                </div>
+			</div>
+			<div class="sub" id="s2">
+				<p>Habilidades</p>
+                <div class="edDECont">
+					<div class="edDe">
+						<p>Diseño de Aplicaciones Moviles y Web</p>
+						<img src="../img/habilidades/habilidadesTec/disenoapp1.jpg">
+
+                    </div>
+					<div class="edDe">
+						<p>Desarrollo de Aplicaciones Moviles en Android y iOS</p>
+						<img src="../img/habilidades/habilidadesTec/iosandroid.jpg">
+
+                    </div>
+					<div class="edDe">
+						<p>Desarrollo de Sitios Web</p>
+						<img src="../img/habilidades/habilidadesTec/web.png">
+
+                    </div>
+                    <div class="edDe">
+						<p>Diseño y Desarrollo de Bases de Datos</p>
+						<img src="../img/habilidades/habilidadesTec/db.jpg">
+
+                    </div>
+
+                </div>
+				<p>Habilidades Blandas</p>
+                <div class="edDECont">
+					<div class="edDe">
+						<p>Trabajo en Equipo</p>
+						<img src="../img/habilidades/habilidadesblandas/equip.jpg">
+                    </div>
+					<div class="edDe">
+						<p>Adaptabilidad</p>
+						<img src="../img/habilidades/habilidadesblandas/adapt.jpg">
+                    </div>
+					<div class="edDe">
+						<p>Pensamiento Critico</p>
+						<img src="../img/habilidades/habilidadesblandas/critic.jpg">
+
+                    </div>
+                    <div class="edDe">
+						<p>Creatividad</p>
+						<img src="../img/habilidades/habilidadesblandas/creat.jpg">
+                    </div>
+                </div>
+				<br>
+			</div>
+			
+			<div class="sub" id="s3">
+				<div class="edDECont">
+					<p>Proyectos</p>
+
+					<div class="edDe" id="sis">
+						<p>Mobify<br><small>Mobify es un proyecto realizado en el colegio. Tiene el objetivo de enseñar como funciona una compañia real. Se participò en la creaiòn de una pagina web. Esta disponible en: <a href="https://mobify.onrender.com">Mobify</a></small></p>
+						<img src="../img/proyectos/mobify.png">
+                    </div>
+					<div class="edDe" id="sis">
+						<p>EduReports<br><small>EduReports es una herramienta desarrollada para el manejo de reportes de problemas dentro de una institución. Se utilizaron multiples herramientas web y una base de datos. Esta disponible en: <a href="https://github.com/G10sr/edureports">EduReports</a></small></p>
+						<img src="../img/proyectos/EduReports.png">
+                    </div>
+					<div class="edDe" id="sis">
+						<p>DeliveryBee<br><small>DeliveryBee es un prototipo de plataforma para compras en linea. Se desarrollo para introducir a desarrollo web entre multiples desarrolladores.</small></p>
+						<img src="../img/proyectos/delibery.png">
+
+                    </div>
+                </div>
+				<br>
+			</div>
+			<div style="width: 1vw; flex-shrink: 0;"></div>
+
+		</div>
+	</div>
+</body>
+
+</html>
