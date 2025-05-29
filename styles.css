@@ -19,8 +19,9 @@ body {
 	animation: entrar 2s ease-out forwards;
 }
 
+
 #boxmain img {
-	margin-top: 6vh;
+	margin-top: 5vh;
 	height: 40dvh;
 	width: 40dvh;
 	border-radius: 800px;
@@ -30,13 +31,29 @@ body {
 #SobreMi h4,
 #boxmain p,
 #boxmain a,
+#boxmain button,
 #boxmain ul {
 	font-family: "DM Sans", sans-serif;
 	color: whitesmoke;
 	width: fit-content;
 	margin: 0;
 }
-
+#boxmain button{
+	color: rgb(54, 54, 54);
+	margin-left: 1vw;
+	align-self: baseline;
+	padding: 0.8vh;
+	margin-top: 1vh;
+	border-radius: 30px ;
+	stroke: none;
+	border: none;
+	cursor: pointer;
+	transition: 700ms;
+}
+#boxmain button:hover{
+	color: rgb(255, 255, 255);
+	background-color: rgb(54, 54, 54);
+}
 #boxmain h1 {
 	font-size: 160%;
 	margin: 6%;
