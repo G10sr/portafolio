@@ -22,9 +22,11 @@ body {
 
 #boxmain img {
 	margin-top: 5vh;
-	height: 40dvh;
-	width: 40dvh;
+	max-height: 40dvh;
+	width: fit-content;
 	border-radius: 800px;
+	object-fit:scale-down;
+
 }
 
 #boxmain h1,
