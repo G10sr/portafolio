@@ -5,7 +5,16 @@ body {
 	gap: 1vw;
 	background-color: rgb(255, 249, 237);
 }
-
+.telefonoviw{
+	display: flex;
+	flex-direction: column;
+	visibility: hidden;
+	position: absolute;
+	top: 30vh;
+	width: 50vw;
+	left: 20vw;
+	
+}
 /* Contenedor principal izquierdo */
 #boxmain {
 	height: 90vh;
@@ -193,6 +202,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content:space-between;
+	
 }
 .edDe img{
 	border-radius: 12px;
@@ -240,5 +250,16 @@ body {
 	100% {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+@media (max-width:838px) {
+	#boxmain{
+		visibility: hidden;
+	}
+	#boxmain2{
+		visibility: hidden;
+	}
+	.telefonoviw{
+		visibility: visible;
 	}
 }
